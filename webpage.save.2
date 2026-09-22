@@ -33,7 +33,7 @@
 
 			border: 1px solid rgba(255, 255, 255, 0.55);
 			
-			outline: 3px solid #B2D8D8;
+			outline: 3px solid white;
 			outline-offset: 4px;
 
 			background:
@@ -43,14 +43,9 @@
 		}
 
 		.banner-s {
-			height: 350px;
-			width: 310px;
+			height: 100%;
 			transform: translateX(10px);
 			position: absolute;
-			bottom: 0px;
-			right: -50px;
-			perspective: 300px;
-			filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
 		}
 
 		.bar-t {
@@ -190,7 +185,8 @@
 				
 		}
 
-		.substack {                        position: absolute;
+		.substack {
+                        position: absolute;
                         width: 350px;
                         height: 100px;
                         border-radius: 20px;
@@ -210,27 +206,23 @@
                                 position: absolute;
                                 height: 100px;
                                 width: 100px;
-                }               
+                                
 
 		.insta:hover, 
 		.youtube:hover,
 		.git:hover,
 		.spotify:hover,
-		.substack:hover,
-		.about:hover,
-		.music:hover {
+		.substack:hover {
 			transform: scale(1.08) translateY(-5px);
     			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 		}
-
 	
 
 		.about {
-			width: 300px;
-			height: 300px;
+			width: 500px;
+			height: 500px;
 			position: absolute;
 			top: 550px;
-			padding: 20px;
 			align-items: center;
 			border-radius: 10px;
 			
@@ -244,56 +236,33 @@
                                 inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
 			overflow-y: auto;
-			
-			text-align: center;
 
-			color : white;
-
-		}
-
-		h3 {
-			position: sticky;
-			top: 2px;
 		}
 
 		.music {
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-			padding: 10px;
-			margin: 10px;
-			opacity: 0.9;
+			opacity: 0.8;
 			backdrop-filter: blur(15px);
 			-webkit-backdrop-filter: blur(15px);
 			
-			outline: 2px solid #B2D8D8;
-                        outline-offset: 4px;
-			
 			border: 1px solid rgba(255, 255, 255, 0.55);
 
-			box-shadow: 20px 20px 10px #5DA0BA;
-
-			perspective: 300px;
+                        box-shadow:
+                                0px 10px 30px rgba(70, 130, 150, 0.15),
+                                inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
                         background: rgba(255, 255, 255, 0.18);
 
 			display: flex;
-			width: 300px;
-			height: 200px;
+			width: 400px;
+			height: 300px;
 			z-index: 10;
 			position: absolute;
 			border-radius: 10px;
-			top: 600px;
+			top: 750px;
 			right: 100px;
 		}
 
-		#now {
-    			display: none;
-		}
-
-		.about.h {
-			position: sticky;
-		}		
+		
 
 	</style>
 
@@ -331,41 +300,10 @@
 	
 	</div>
 	
-	<div class= "about">
-
-	<div class= about.h>
-
-	<h3> WELCOME! </h3>
-
-	</div>
-
-
+	<div class= "about"> 
 	</div>
 
 	<div class= "music"> 
-	
-	<div id= "now">
-		NOW PLAYING
-	</div>
-
-	<div class= "song-info">
-		<img id= "cover" src= "" alt="Song cover">
-
-		<h3 id= "song-name"></h3>
-	
-	    </div>
-
-    <div id="visualizer">
-        <!-- CAVA bars will go here -->
-    </div>
-
-    <div class="music-controls">
-        <button id="previous">⏮</button>
-        <button id="play">▶</button>
-        <button id="next">⏭</button>
-    </div>
-	</div>
-	
 	</div>
 	<script src="script.js"></script>
 </body>
